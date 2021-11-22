@@ -1,7 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Mohave:wght@700&family=Nothing+You+Could+Do&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --primary-red: #70000e;
+    --lato-font-family: 'Lato', sans-serif;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-red);
+    mix-blend-mode: soft-light;
+}
+
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 7rem;
+	z-index: 25;
+	color: white;
+	padding: 0 3%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-family: 'Nothing You Could Do', cursive;    
+}
+
+.header.transparent {
+	background: transparent;
 }
 
 .video_container {
@@ -9,6 +45,9 @@
     max-height: 100vh;
     overflow: hidden;
     position: relative;
+    background-image: url('./media/cover.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .video_container video {
@@ -22,16 +61,4 @@
     
 }
 
-:root {
-    --primary-red: #70000e;
-}
 
-.overlay {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--primary-red);
-    mix-blend-mode: soft-light;
-}
